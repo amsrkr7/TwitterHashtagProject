@@ -1,0 +1,160 @@
+.navbar-line-inner{
+    width:1200px;
+    height: 2px;
+    margin: 0px auto 0px auto;
+    overflow:hidden;
+   }
+
+.navbar-line-col1 {
+    width: 26%;
+    margin-right:2%
+    float: left;
+    height: 100%;
+
+}
+.navbar-inner{
+    width:1200px;
+    height: 60px;
+    margin: 0px auto 0px auto;
+    overflow:hidden;
+}
+.navbar-line-wrapper{
+    height: 20px;
+    width: 100%;
+    display:block;
+}
+.navbar-button-line{
+    width: 33.3%
+    height:100%;
+    background-color: none;
+    float: left;
+   ;
+
+}
+
+.navbar-button{
+    
+    margin-right: 0%;
+    height:100%;
+    text-align: center;
+    front-size: 1.2em;
+    color: black;
+    float: left;
+    background-color:#ddd;
+}
+
+
+.navbar-notification-button{
+    width: 37.3%
+    
+}
+
+.navbar-home-button{
+    width: 27.3%
+    
+}
+.navbar-messages-button{
+    width: 35.3%
+    
+}
+.navbar-line-wrapper{
+    height: 2px;
+    color: #222;
+
+}
+.navbar{
+    width:100%;
+    height: 80px;
+    overflow:hidden;
+}
+.navbar-col1 {
+    width: 26%;
+    float: left;
+    height: 100%;
+
+}
+
+.navbar-col2 {
+    width: 44%;
+    margin-left: 2%;
+    float: left;
+    height: 100%;
+    background-color:white;
+
+}
+
+.navbar-col3 {
+    width: 26%;
+    float: right;
+    height: 100%;
+    background-color:#ddd;
+
+}
+
+.navbar-button:hover{
+    background-color: aquamarine;
+    cursor:pointer;
+}
+
+
+.navbar-button-line:hover{
+    background-color:red;
+}
+
+.icon{
+    margin-top:15px;
+    margin-left:10px;
+    float:left;
+    width: 30px;
+    height:30px;
+
+    background-image:none;
+    background-size:25px;
+    background-position-x: center;
+    background-position-y: center;
+}
+.iconforlogo{
+
+    margin-top:0px;
+    margin-left:0px;
+    float:left;
+    width: 80px;
+    height:50px;
+
+    background-image:none;
+    background-size:73px;
+    background-position-x: center;
+    background-position-y: center;
+
+
+}
+
+.button-text{
+    font-size:0.8em;
+    font-weight: 800;
+    color: #333;
+    height:30px;
+    line-height:29px;
+    margin-top:15px;
+    margin-left: 0px;
+    float: left;
+}
+
+.icon-messages{
+    background-image: url('../images/messages.png');
+
+}
+
+.icon-notifications{
+    background-image: url('../images/notifications.png');
+
+}
+
+.icon-home{
+    background-image: url('../images/home.png');
+
+}
+
+.icon-logo{
+    background-image: url('../images/tweeter-logo.png')
+}

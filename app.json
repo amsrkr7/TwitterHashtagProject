@@ -1,0 +1,27 @@
+{
+  "name": "Twitter Hashtag Suggester",
+  "description": "Application to create tweets then generate hashtags.",
+  "keywords": [
+    "oauth"
+  ],
+  "website": "https://hashtag-suggester.herokuapp.com/",
+  "repository": "https://github.com/twitterteam/TwitterFlaskProject.git",
+  "env": {
+    "FLASK_SECRET_KEY": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "TWITTER_OAUTH_CLIENT_KEY": {
+      "description": "The OAuth client ID for your application, assigned by Twitter",
+      "value": "app-id-goes-here"
+    },
+    "TWITTER_OAUTH_CLIENT_SECRET": {
+      "description": "The OAuth client secret for your application, assigned by Twitter",
+      "value": "app-secret-goes-here"
+    }
+  },
+  "addons": [{ "plan": "heroku-postgresql" }],
+  "scripts": {
+    "postdeploy": "flask createdb"
+  }
+}

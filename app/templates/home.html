@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <title>Hashtag Suggester</title>
+    <link href="../static/css/layout.css" rel = "stylesheet"/>
+    <link href="../static/css/navbar.css" rel = "stylesheet"/>
+    <link href="../static/css/profile-navbar.css" rel = "stylesheet"/>
+    <link href="../static/css/right-navbar.css" rel = "stylesheet"/>
+    
+    <script src = "../static/js/app.js" type = "text/javascript"></script>
+</head>
+<body>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flash">
+      {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  {% if current_user.is_authenticated %}
+    You are logged in as {{ current_user.name }}!
+    <div class="wrapper">
+
+      <div class="navbar" id = "main-navbar">
+          <div class ="navbar-inner" id = "navbar-inner">
+              <div class="navbar-col1">
+                  <div class= "navbar-button navbar-home-button">
+                      <span class="icon icon-home"></span>
+                      <span class= "button-text">Home</span>
+
+                  </div>
+                  <div class= "navbar-button navbar-notification-button">
+                      <span class="icon icon-notifications"></span>
+                      <span class= "button-text">Notifications</span>
+                      
+
+                  </div>
+                  <div class= "navbar-button navbar-messages-button">
+                      <span class="icon icon-messages"></span>
+                      <span class= "button-text">Messages</span>
+                  </div>
+              </div>
+      
+              <div class="navbar-col2">
+                  <div class="logo">
+                    <span class="iconforlogo icon-logo"></span>
+                  </div>
+              </div>
+              <div class="navbar-col3 right-navbar-section">
+                  <div class = "profile-navbar-col1">Search Here</div>
+                  <div class = "profile-navbar-col2">
+                    <a href="{{ url_for("logout") }}">Log out</a>
+                  </div>
+                  <div class = "profile-navbar-col3">
+                      <!--div class = "tweet-button">Tweet</div>-->
+                  </div>
+              </div>  
+          </div>
+          <div class="navbar-line-wrapper">
+              <div  class="navbar-line-inner">
+                  <div class="navbar-line-col1">
+                      <div class= "navbar-button-line">Home</div>
+                      <div class= "navbar-button-line">Notifications</div>
+                      <div class= "navbar-button-line">Messages</div>
+
+                  </div>
+              </div>
+
+          </div>
+      </div>
+      <div class = "mainbody" id= "mainbody">
+          <div class="col1">#Explore</div>
+          <div class="col2">
+              <form>
+                  <label for="tweet">Enter Tweet:</label><br>
+                  <input type="text" id="tweet" name="status" maxlength = "140"><br>
+                  <input type="submit" value="Hashtag Suggester">
+                  <input type="submit" value="Send Tweet">
+              </form>
+
+
+          </div>
+
+          <div class = "col3">NewToYourLocation</div>   
+      </div>
+    
+  </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="src/character-counter.js"></script>
+  <script>
+    $('#tweet').characterCounter({
+      max: 140
+    });
+    </script>
+  {% else %}
+    You are not logged in.<br>
+    <a href="{{ url_for("twitter.login") }}">
+      <img alt="sign in button" src="../static/sign-in-with-twitter.png">
+    </a>
+  {% endif %}
+</body>

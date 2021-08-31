@@ -1,0 +1,10 @@
+flask>=1.0
+flask-dance[sqla]>=2.0.0
+flask-sqlalchemy
+flask-login
+blinker
+sqlalchemy < 1.4.0
+python-dotenv
+gunicorn
+psycopg2-binary
+nltk

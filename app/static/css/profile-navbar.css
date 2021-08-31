@@ -1,0 +1,25 @@
+.profile-navbar-col1 {
+    width: 40%;
+    margin-right: 2%;
+    float: left;
+    height: 100%;
+
+
+}
+
+.profile-navbar-col2 {
+    width: 20%;
+    margin-right: 2%;
+    float: left;
+    height: 100%;
+   
+
+}
+
+.profile-navbar-col3 {
+    width: 35%;
+    float: right;
+    height: 100%;
+    position=relative;
+
+}
